@@ -1,8 +1,29 @@
 h1 {
-    color: red;
     font-size: 50px;
+    color: red;
 }
 
 img {
     background-color: pink;
+}
+
+img:hover {
+    background-color: gold;
+}
+
+.bacon {
+    background-color: lightgreen
+}
+
+.broccoli {
+    background-color: pink;
+}
+
+.circular {
+    border-radius: 100%;
+}
+
+
+#heading {
+    color: blue;
 }
