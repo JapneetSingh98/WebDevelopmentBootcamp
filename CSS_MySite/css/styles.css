@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* div {
+    background-color: #E3FDFD;
+} */
+
+.top {
+    background-color: #E3FDFD;
+}
+
+.mid {
+    background-color: orange;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+
+.bot {
+    background-color: yellow;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+
+.pro {
+    text-decoration: underline;
+}
