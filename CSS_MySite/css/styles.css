@@ -16,28 +16,54 @@ h1 {
     background-color: #E3FDFD;
 } */
 
-.top {
+.top-container {
     background-color: #E3FDFD;
     position: relative;
     padding-top: 100px;
 }
 
-.mid {
-    background-color: orange;
-    height: 200px;
-    width: 200px;
-    margin: 10px;
+.middle-container {
+    background-color: #E3FDFD;
+    position: relative;
+    padding-top: 100px;
 }
 
-.bot {
-    background-color: yellow;
-    height: 200px;
-    width: 200px;
-    margin: 10px;
+.bottom-container {
+    background-color: #A6E3E9;
+    padding: 10px;
+}
+
+.mountain {
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
 .pro {
     text-decoration: underline;
+}
+
+.pfp {
+    border-radius: 50%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.experience {
+    margin: auto;
+    width: 80%;
+    max-width: 900px;
+}
+
+.experience-list {
+    text-align: left;
+}
+
+.hr-lev3 {
+    border: none;
+    border-top: 5px dotted #A6E3E9;
+    height: 0;
+    max-width: 50px;
 }
 
 .top-cloud {
@@ -50,4 +76,8 @@ h1 {
     position: absolute;
     left: 300px;
     bottom: 300px;
+}
+
+.contact-glyph {
+    height: 50px;
 }
