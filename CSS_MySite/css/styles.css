@@ -79,14 +79,33 @@ body {
     max-width: 50px;
 }
 
-.bottom-container {
-    background-color: #A6E3E9;
-    padding: 10px;
+.other-experience {
+    margin: auto;
+    width: 80%;
+    max-width: 900px;
+}
+
+.other-experience .images {
+    /* background-color: white; */
+    width: 150px;
+    float: right;
+    margin-left: 20px;
+}
+
+.other-experience .images img {
+    width: 100%;
+}
+
+.other-experience .experience-row {
+    text-align: left;
 }
 
 
 
-
+.bottom-container {
+    background-color: #A6E3E9;
+    padding: 10px;
+}
 
 .contact-glyph {
     height: 50px;
