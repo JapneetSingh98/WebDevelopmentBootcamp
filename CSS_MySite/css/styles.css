@@ -4,9 +4,12 @@ body {
     font-family: 'PT Sans', sans-serif;
 }
 
+
+
 .top-container {
     background-color: #E3FDFD;
     position: relative;
+    padding: 0;
     padding-top: 100px;
     color: #66bfbf;
 }
@@ -46,47 +49,72 @@ body {
 }
 
 
-.middle-container {
-    background-color: #E3FDFD;
+
+.profile {
     position: relative;
-    padding-top: 100px;
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
-.middle-container h2 {
-    color: #71C9CE
-}
-
-.pfp {
+.profile .pfp {
     border-radius: 50%;
-    height: 100px;
-    margin-top: 10px;
+    height: 150px;
 }
 
-.experience {
+.profile h2 {
+    color: #71C9CE;
     margin: auto;
     width: 80%;
     max-width: 900px;
 }
 
-.experience-list {
+.profile p {
+    margin: auto;
+    width: 80%;
+    max-width: 900px;
+}
+
+
+
+.experience {
+    position: relative;
+    background-color: #E3FDFD;
+    margin: 0;
+    padding: 0;
+}
+
+.experience .experience-list {
     text-align: left;
 }
 
+
+
+.hr-lev2 {
+    margin: 0, auto, 0, auto;
+    border: none;
+    border-top: 5px dotted #A6E3E9;
+    height: 0;
+}
+
 .hr-lev3 {
+    margin: 0, auto, 0, auto;
     border: none;
     border-top: 5px dotted #A6E3E9;
     height: 0;
     max-width: 50px;
 }
 
+
+
 .other-experience {
-    margin: auto;
-    width: 80%;
-    max-width: 900px;
+    position: relative;
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
 .other-experience .images {
-    /* background-color: white; */
     width: 150px;
     float: right;
     margin-left: 20px;
@@ -98,15 +126,63 @@ body {
 
 .other-experience .experience-row {
     text-align: left;
+    clear: left;
 }
+
+
+.contact-me {
+    position: relative;
+    background-color: #E3FDFD;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-me .btn {
+    background: #A6E3E9;
+    background-image: -webkit-linear-gradient(top, #A6E3E9, #31c6d4);
+    background-image: -moz-linear-gradient(top, #A6E3E9, #31c6d4);
+    background-image: -ms-linear-gradient(top, #A6E3E9, #31c6d4);
+    background-image: -o-linear-gradient(top, #A6E3E9, #31c6d4);
+    background-image: linear-gradient(to bottom, #A6E3E9, #31c6d4);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .contact-me .btn:hover {
+    background: #71C9CE;
+    text-decoration: none;
+  }
 
 
 
 .bottom-container {
     background-color: #A6E3E9;
-    padding: 10px;
 }
 
-.contact-glyph {
+.bottom-container .cont{
+    margin: auto;
+    width: 80%;
+    max-width: 900px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bottom-container .cont .contact-glyph {
     height: 50px;
+    margin-top: 10px;
+}
+
+
+
+.container {
+    margin: auto;
+    width: 80%;
+    max-width: 900px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
