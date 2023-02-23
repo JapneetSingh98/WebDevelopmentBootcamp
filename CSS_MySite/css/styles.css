@@ -4,6 +4,25 @@ body {
     font-family: 'PT Sans', sans-serif;
 }
 
+h2 {
+    padding-bottom: 20px;
+}
+
+hr.hr-lev2 {
+    margin: 0, auto, 0, auto;
+    border: none;
+    border-top: 5px dotted #A6E3E9;
+    height: 0;
+}
+
+hr.hr-lev3 {
+    margin: 0, auto, 0, auto;
+    border: none;
+    border-top: 5px dotted #A6E3E9;
+    height: 0;
+    max-width: 50px;
+}
+
 
 
 .top-container {
@@ -65,15 +84,15 @@ body {
 .profile h2 {
     color: #71C9CE;
     margin: auto;
-    width: 80%;
-    max-width: 900px;
+    /* width: 80%;
+    max-width: 900px; */
 }
 
-.profile p {
+/* .profile p {
     margin: auto;
     width: 80%;
     max-width: 900px;
-}
+} */
 
 
 
@@ -87,24 +106,6 @@ body {
 .experience .experience-list {
     text-align: left;
 }
-
-
-
-.hr-lev2 {
-    margin: 0, auto, 0, auto;
-    border: none;
-    border-top: 5px dotted #A6E3E9;
-    height: 0;
-}
-
-.hr-lev3 {
-    margin: 0, auto, 0, auto;
-    border: none;
-    border-top: 5px dotted #A6E3E9;
-    height: 0;
-    max-width: 50px;
-}
-
 
 
 .other-experience {
@@ -151,12 +152,12 @@ body {
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
-  }
+}
   
-  .contact-me .btn:hover {
+.contact-me .btn:hover {
     background: #71C9CE;
     text-decoration: none;
-  }
+}
 
 
 
