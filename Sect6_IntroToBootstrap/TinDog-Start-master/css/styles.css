@@ -5,6 +5,7 @@ font-family: 'Ubuntu', sans-serif;
 
 body {
     font-family: 'Montserrat', 'sans-serif';
+    background-color: grey;
 }
 
 .container-fluid {
@@ -17,12 +18,12 @@ h1 {
     font-size: 3.5rem;
 }
 
+
 /* Title */
     #title {
         background-color: #ff4c68;
         color: white;
     }
-
     /* Navigation Bar */
     .navbar {
         padding: 0 0 4.5rem;
@@ -46,29 +47,34 @@ h1 {
     }
 
     /* Title Image */
+    #phone-img-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .title-img {
         width: 60%;
         transform: rotate(25deg);
     }
 
+
 /* Features */
     #features {
         position: relative;
         background-color: white;
-        margin-top: -120px;
+        /* margin-top: -120px; */
         z-index: 10;
         text-align: center;
     }
-    #features .container-fluid {
+    /* #features .container-fluid {
         padding: 0 15% 70px;
-    }
+    } */
     #features .col-md-4 {
-        margin: 70px auto 0;
+        margin: 50px auto;
     }
     #features i {
         margin: 0 auto;
-        font-size: 4rem;
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
         color: #ef8172;
     }
     #features i:hover{
