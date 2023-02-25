@@ -72,8 +72,6 @@ h3 {
     #features {
         position: relative;
         background-color: white;
-        /* margin-top: -120px; */
-        z-index: 10;
         text-align: center;
     }
     #features .col-md-4 {
@@ -117,4 +115,14 @@ h3 {
     .press-logo {
         width: 15%;
         margin: 20px 20px 50px;
+    }
+
+/* Pricing */
+    #pricing {
+        position: relative;
+        background-color: white;
+        text-align: center;
+    }
+    .pricing-column {
+        padding: 3% 2%;
     }
