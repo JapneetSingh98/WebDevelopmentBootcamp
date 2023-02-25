@@ -6,11 +6,12 @@ font-family: 'Ubuntu', sans-serif;
 body {
     font-family: 'Montserrat', 'sans-serif';
     background-color: grey;
+    position: relative;
 }
 
 .container-fluid {
-    padding: 3% 15%;
-    max-width: 1500px;
+    padding: 3% 15% 7%;
+    /* max-width: 1500px; */
 }
 
 h1 {
@@ -67,6 +68,7 @@ h3 {
         width: 60%;
         transform: rotate(25deg);
         position: absolute;
+        z-index: inherit;
     }
 
 
@@ -76,6 +78,7 @@ h3 {
         background-color: white;
         text-align: center;
         z-index: 1;
+        padding: 3% 15%
     }
     #features .col-md-4 {
         margin: 50px auto;
@@ -95,9 +98,11 @@ h3 {
 
 /* Testimonials */
     #testimonials {
+        position: inherit;
         text-align: center;
         background-color: #ef8172;
         color: white;
+        z-index: 1;
     }
     .carousel-inner {
         padding: 7% 15%;
@@ -114,7 +119,7 @@ h3 {
         position: relative;
         background-color: #ef8172;
         text-align: center;
-        padding-bottom: 3%;
+        padding: 3% 0
     }
     .press-logo {
         width: 15%;
@@ -126,6 +131,7 @@ h3 {
         position: relative;
         background-color: white;
         text-align: center;
+        padding: 3% 15%
     }
     .pricing-column {
         padding: 3% 2%;
