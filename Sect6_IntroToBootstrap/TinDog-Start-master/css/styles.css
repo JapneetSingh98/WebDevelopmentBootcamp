@@ -162,7 +162,7 @@ h3 {
 
 
 @media (max-width: 1030px) {
-    #title .container-fluid {
+    #title .row {
         text-align: center;
     }
     .title-img {
