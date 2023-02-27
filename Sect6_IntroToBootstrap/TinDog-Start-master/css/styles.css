@@ -62,7 +62,7 @@ h3 {
         display: flex;
         justify-content: center;
         position: relative;
-        text-align: center;
+        /* text-align: center; */
     }
     .title-img {
         width: 60%;
@@ -136,3 +136,14 @@ h3 {
     .pricing-column {
         padding: 3% 2%;
     }
+
+
+@media (max-width: 1030px) {
+    #title {
+        text-align: center;
+    }
+    .title-img {
+        position: static;
+        transform: rotate(0);
+    }
+}
