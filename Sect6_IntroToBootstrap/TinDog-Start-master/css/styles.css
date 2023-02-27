@@ -5,25 +5,9 @@ font-family: 'Ubuntu', sans-serif;
 
 body {
     font-family: 'Montserrat', 'sans-serif';
-    background-color: grey;
+    background-color: #ff4c68;
     position: relative;
-}
-
-.container-fluid {
-    padding: 3% 15% 7%;
-    /* max-width: 1500px; */
-}
-
-h1 {
-    font-weight: 900;
-    line-height: 1.5;
-    font-size: 3.5rem;
-}
-
-h2 {
-    font-weight: 600;
-    font-size: 3rem;
-    line-height: 1.5;
+    text-align: center;
 }
 
 h3 {
@@ -31,10 +15,32 @@ h3 {
     font-size: 1.5rem;
 }
 
+/* Headers */
+    .big-header {
+        font-weight: 800;
+        line-height: 1.5;
+        font-size: 3.5rem;
+        color: white;
+    }
+    .section-header {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 1.5;
+    }
+
+
+.container-fluid {
+    padding: 7% 15%;
+}
+
+
 /* Title */
     #title {
         background-color: #ff4c68;
-        color: white;
+        text-align: left;
+    }
+    #title .container-fluid {
+        padding: 3% 15% 7%;
     }
     /* Navigation Bar */
     .navbar {
@@ -62,7 +68,6 @@ h3 {
         display: flex;
         justify-content: center;
         position: relative;
-        /* text-align: center; */
     }
     .title-img {
         width: 60%;
@@ -76,7 +81,6 @@ h3 {
     #features {
         position: relative;
         background-color: white;
-        text-align: center;
         z-index: 1;
         padding: 3% 15%
     }
@@ -99,13 +103,14 @@ h3 {
 /* Testimonials */
     #testimonials {
         position: inherit;
-        text-align: center;
         background-color: #ef8172;
         color: white;
         z-index: 1;
     }
-    .carousel-inner {
-        padding: 7% 15%;
+    .testimonial-text {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 1.5;
     }
     .testimonial-image {
         width: 10%;
@@ -118,7 +123,6 @@ h3 {
     #press {
         position: relative;
         background-color: #ef8172;
-        text-align: center;
         padding: 3% 0
     }
     .press-logo {
@@ -130,24 +134,21 @@ h3 {
     #pricing {
         position: relative;
         background-color: white;
-        text-align: center;
         padding: 3% 15%
     }
     .pricing-column {
         padding: 3% 2%;
+    }
+    .price-text {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 1.5;
     }
 
 
 /* CTA */
     #cta {
         background-color: #ff4c68;
-        text-align: center;
-        padding-bottom: 20px;
-    }
-    #cta h3 {
-        color: white;
-        font-weight: 800;
-        font-size: 3rem;
         padding: 5% 15% 0;
     }
     #cta .download-button {
@@ -158,11 +159,9 @@ h3 {
 /* Footer */
     #footer {
         background-color: white;
-        text-align: center;
-        /* padding: 5rem auto; */
     }
     #footer i {
-        margin: 5rem 1rem 1rem;
+        margin: 0 0.5rem;
     }
     #footer p {
         margin: 0;
@@ -176,5 +175,8 @@ h3 {
     .title-img {
         position: static;
         transform: rotate(0);
+    }
+    .download-button {
+        margin: 5% 1rem;
     }
 }
