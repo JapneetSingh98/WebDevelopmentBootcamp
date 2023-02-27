@@ -138,6 +138,37 @@ h3 {
     }
 
 
+/* CTA */
+    #cta {
+        background-color: #ff4c68;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    #cta h3 {
+        color: white;
+        font-weight: 800;
+        font-size: 3rem;
+        padding: 5% 15% 0;
+    }
+    #cta .download-button {
+        margin: 5% 1rem;
+    }
+
+
+/* Footer */
+    #footer {
+        background-color: white;
+        text-align: center;
+        /* padding: 5rem auto; */
+    }
+    #footer i {
+        margin: 5rem 1rem 1rem;
+    }
+    #footer p {
+        margin: 0;
+        padding-bottom: 1rem;
+    }
+
 @media (max-width: 1030px) {
     #title {
         text-align: center;
