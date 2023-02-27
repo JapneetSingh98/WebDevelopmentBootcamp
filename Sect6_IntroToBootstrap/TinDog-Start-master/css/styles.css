@@ -160,9 +160,9 @@ h3 {
         padding-bottom: 1rem;
     }
 
-    
+
 @media (max-width: 1030px) {
-    #title {
+    #title .container-fluid {
         text-align: center;
     }
     .title-img {
