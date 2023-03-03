@@ -27,7 +27,7 @@ function showDice(selector, max, numDice, rolls) {
     }
 }
 
-function displayDice(numAttack, numDefense) {
+function displayDice() {
     let attackRolls = getRolls(numAttack);
     let defenseRolls = getRolls(numDefense);
 
@@ -55,30 +55,21 @@ function displayDice(numAttack, numDefense) {
     showDice(".defenseDice img", numDefenseMax, numDefense, defenseRolls);
 }
 
-
 let numAttack = null;
 let numDefense = null;
-while (numAttack === null) {
-    numAttack = prompt("How many Attack Dice?");
-    if (numAttack == "1" || numAttack == "2" || numAttack == "3") {
-        numAttack = parseInt(numAttack);
-    } else {
-        numAttack = null;
-        alert("You must enter 1, 2, or 3");
-    }
-}
-if (numAttack === 1) {
-    numDefense = 1;
-} else {
-    while (numDefense === null) {
-        numDefense = prompt("1 or 2 Defense Dice?");
-        if (numDefense == "1" || numDefense == "2") {
-            numDefense = parseInt(numDefense);
-        } else {
-            numDefense = null;
-            alert("You must enter 1 or 2");
-        }
-    }
+
+function checkAttack(numAttackEntered) {
+    numAttack = numAttackEntered;
+    enableRoll();
 }
 
-displayDice(numAttack, numDefense);
+function checkDefense(numDefenseEntered) {
+    numDefense = numDefenseEntered;
+    enableRoll();
+}
+
+function enableRoll() {
+    if (numAttack != null && numDefense != null) {
+        document.querySelector("button").removeAttribute("disabled");
+    }
+}

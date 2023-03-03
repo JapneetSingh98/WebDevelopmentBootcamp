@@ -1,6 +1,7 @@
 body {
     background-color: #393E46;
     font-family: 'Noto Serif', serif;
+    color: whitesmoke;
 }
 
 h1 {
@@ -8,7 +9,7 @@ h1 {
     font-family: 'Tilt Prism', serif;
     text-shadow: 5px 0 #232931;
     font-size: 8rem;
-    color: white;
+    color: whitesmoke;
 }
 
 p {
@@ -31,6 +32,11 @@ footer {
 .container {
     margin: auto;
     text-align: center;
+}
+
+.btn {
+    margin: 20px auto auto auto;
+    padding: 8px 80px;
 }
 
 .row.dice {

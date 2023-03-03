@@ -22,9 +22,26 @@
 
     </head>
     <body>
-
         <div class="container">
             <h1>Risk Dice</h1>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <input type="number" id="numAttack" name="numAttack" min="1" max="3" step="1" onChange="checkAttack(this.value);">
+                    <label for="numAttack">
+                        <h2>Number of Attack Dice (1 - 3):</h2>
+                    </label>
+                </div>
+                <div id="defense" class="col-lg-6">
+                    <input type="number" id="numDefense" name="numDefense" min="1" max="2" step="1" onChange="checkDefense(this.value);">
+                    <label for="numDefense">
+                        <h2>Number of Defense Dice (1 - 2):</h2>
+                    </label>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary btn-lg" disabled onclick="displayDice()">Roll</button>
+
             <div class="row">
                 <div class="col-lg-6">
                     <p class="outcome1"></p>
@@ -33,7 +50,7 @@
                     <p class="outcome2"></p>
                 </div>
             </div>
-            <p style="color: white;">Refresh to roll again.</p>
+
             <div class="row dice">
                 <div class="col-6 attackDice">
                     <p>Attack</p>
@@ -48,7 +65,7 @@
                 </div>
             </div>
             
-            
+
         </div>
 
     </body>
