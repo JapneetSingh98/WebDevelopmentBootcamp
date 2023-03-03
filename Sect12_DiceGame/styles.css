@@ -47,6 +47,6 @@ footer {
     padding-top: 10px;
 }
 
-.outcome1, .outcome2 {
+.outcome1 p, .outcome2 p {
     color: #ce901c;
 }

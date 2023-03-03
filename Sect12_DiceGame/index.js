@@ -51,12 +51,19 @@ function displayDice() {
     let outcome2 = null;
     if (attackLose === defenseLose) {
         outcome1 = "Both players lose " + attackLose + armyGrammar(attackLose);
+        document.querySelector(".outcome2").style.display = "none";
+        document.querySelector(".outcome1").classList.remove("col-lg-6");
+        document.querySelector(".outcome2").classList.remove("col-lg-6");
+
     } else {
         outcome1 = "Attacking player loses " + attackLose + armyGrammar(attackLose);
         outcome2 = "Defending player loses " + defenseLose + armyGrammar(defenseLose);
+        document.querySelector(".outcome2").style.display = "";
+        document.querySelector(".outcome1").classList.remove("col-lg-6");
+        document.querySelector(".outcome2").classList.add("col-lg-6");
     }
-    document.querySelector(".outcome1").innerHTML = outcome1;
-    document.querySelector(".outcome2").innerHTML = outcome2;
+    document.querySelector(".outcome1 p").innerHTML = outcome1;
+    document.querySelector(".outcome2 p").innerHTML = outcome2;
 
     showDice(".attackDice img", numAttackMax, numAttack, attackRolls);
     showDice(".defenseDice img", numDefenseMax, numDefense, defenseRolls);
