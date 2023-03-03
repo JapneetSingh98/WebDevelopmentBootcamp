@@ -81,7 +81,7 @@ function checkAttack(numAttackEntered) {
 function checkDefense(numDefenseEntered) {
     numDefenseEntered = Number(numDefenseEntered);
     console.log("Defense number: " + numDefenseEntered);
-    if (numDefenseEntered != 1 && numDefenseEntered != 2 && numDefenseEntered != 3) {
+    if (numDefenseEntered != 1 && numDefenseEntered != 2) {
         console.log("invallid Defense number: " + numDefenseEntered);
         alert("Invalid input.");
         document.querySelector("#numDefense").value = null;
