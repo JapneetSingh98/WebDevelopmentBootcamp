@@ -33,7 +33,7 @@ function displayDice() {
 
     let attackLose = 0;
     let defenseLose = 0;
-    for (let i = 0; i < numDefense; i++) {
+    for (let i = 0; i < Math.min(numAttack, numDefense); i++) {
         if (attackRolls[i] > defenseRolls[i]) {
             defenseLose++;
         } else {
