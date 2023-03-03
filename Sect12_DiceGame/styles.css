@@ -1,0 +1,46 @@
+body {
+    background-color: #393E46;
+    font-family: 'Noto Serif', serif;
+}
+
+h1 {
+    margin: 30px;
+    font-family: 'Tilt Prism', serif;
+    text-shadow: 5px 0 #232931;
+    font-size: 8rem;
+    color: white;
+}
+
+p {
+    font-size: 2rem;
+    color: #4ECCA3;
+}
+
+img {
+    width: 80%;
+    display: inline-block;
+}
+
+footer {
+    margin-top: 5%;
+    color: #EEEEEE;
+    text-align: center;
+}
+
+
+.container {
+    margin: auto;
+    text-align: center;
+}
+
+.row {
+    width: 70%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.outcome1, .outcome2 {
+    color: white;
+}
