@@ -33,7 +33,7 @@ footer {
     text-align: center;
 }
 
-.row {
+.row.dice {
     width: 70%;
     max-width: 600px;
     margin: auto;
