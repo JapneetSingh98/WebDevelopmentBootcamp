@@ -59,13 +59,27 @@ let numAttack = null;
 let numDefense = null;
 
 function checkAttack(numAttackEntered) {
-    numAttack = numAttackEntered;
-    enableRoll();
+    numAttackEntered = Number(numAttackEntered);
+    console.log("Attack number: " + numAttackEntered);
+    if (numAttackEntered != 1 && numAttackEntered != 2 && numAttackEntered != 3) {
+        console.log("invallid Attack number: " + numAttackEntered);
+        document.querySelector("#numAttack").value = null;
+    } else {
+        numAttack = numAttackEntered;
+        enableRoll();
+    }
 }
 
 function checkDefense(numDefenseEntered) {
-    numDefense = numDefenseEntered;
-    enableRoll();
+    numDefenseEntered = Number(numDefenseEntered);
+    console.log("Defense number: " + numDefenseEntered);
+    if (numDefenseEntered != 1 && numDefenseEntered != 2 && numDefenseEntered != 3) {
+        console.log("invallid Defense number: " + numDefenseEntered);
+        document.querySelector("#numDefense").value = null;
+    } else {
+        numDefense = numDefenseEntered;
+        enableRoll();
+    }
 }
 
 function enableRoll() {
