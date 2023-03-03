@@ -27,6 +27,13 @@ function showDice(selector, max, numDice, rolls) {
     }
 }
 
+function armyGrammar(num) {
+    if (num === 1) {
+        return " army.";
+    }
+    return " armies."
+}
+
 function displayDice() {
     let attackRolls = getRolls(numAttack);
     let defenseRolls = getRolls(numDefense);
@@ -43,10 +50,10 @@ function displayDice() {
     let outcome1 = null;
     let outcome2 = null;
     if (attackLose === defenseLose) {
-        outcome1 = "Both players lose " + attackLose + " army";
+        outcome1 = "Both players lose " + attackLose + armyGrammar(attackLose);
     } else {
-        outcome1 = "Attacking player loses " + attackLose + " army."
-        outcome2 = "Defending player loses " + defenseLose + " army."
+        outcome1 = "Attacking player loses " + attackLose + armyGrammar(attackLose);
+        outcome2 = "Defending player loses " + defenseLose + armyGrammar(defenseLose);
     }
     document.querySelector(".outcome1").innerHTML = outcome1;
     document.querySelector(".outcome2").innerHTML = outcome2;
@@ -63,6 +70,7 @@ function checkAttack(numAttackEntered) {
     console.log("Attack number: " + numAttackEntered);
     if (numAttackEntered != 1 && numAttackEntered != 2 && numAttackEntered != 3) {
         console.log("invallid Attack number: " + numAttackEntered);
+        alert("Invalid input.");
         document.querySelector("#numAttack").value = null;
     } else {
         numAttack = numAttackEntered;
@@ -75,6 +83,7 @@ function checkDefense(numDefenseEntered) {
     console.log("Defense number: " + numDefenseEntered);
     if (numDefenseEntered != 1 && numDefenseEntered != 2 && numDefenseEntered != 3) {
         console.log("invallid Defense number: " + numDefenseEntered);
+        alert("Invalid input.");
         document.querySelector("#numDefense").value = null;
     } else {
         numDefense = numDefenseEntered;
