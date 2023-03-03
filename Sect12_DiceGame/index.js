@@ -1,5 +1,5 @@
 const numAttackMax = 3;
-const numDefenceMax = 2;
+const numDefenseMax = 2;
 
 function getRolls(numDice) {
     let rolls = [];
@@ -27,37 +27,37 @@ function showDice(selector, max, numDice, rolls) {
     }
 }
 
-function displayDice(numAttack, numDefence) {
+function displayDice(numAttack, numDefense) {
     let attackRolls = getRolls(numAttack);
-    let defenceRolls = getRolls(numDefence);
+    let defenseRolls = getRolls(numDefense);
 
     let attackLose = 0;
-    let defenceLose = 0;
-    for (let i = 0; i < numDefence; i++) {
-        if (attackRolls[i] > defenceRolls[i]) {
-            defenceLose++;
+    let defenseLose = 0;
+    for (let i = 0; i < numDefense; i++) {
+        if (attackRolls[i] > defenseRolls[i]) {
+            defenseLose++;
         } else {
             attackLose++;
         }
     }
     let outcome1 = null;
     let outcome2 = null;
-    if (attackLose === defenceLose) {
+    if (attackLose === defenseLose) {
         outcome1 = "Both players lose " + attackLose + " army";
     } else {
         outcome1 = "Attacking player loses " + attackLose + " army."
-        outcome2 = "Defending player loses " + defenceLose + " army."
+        outcome2 = "Defending player loses " + defenseLose + " army."
     }
     document.querySelector(".outcome1").innerHTML = outcome1;
     document.querySelector(".outcome2").innerHTML = outcome2;
 
     showDice(".attackDice img", numAttackMax, numAttack, attackRolls);
-    showDice(".defenceDice img", numDefenceMax, numDefence, defenceRolls);
+    showDice(".defenseDice img", numDefenseMax, numDefense, defenseRolls);
 }
 
 
 let numAttack = null;
-let numDefence = null;
+let numDefense = null;
 while (numAttack === null) {
     numAttack = prompt("How many Attack Dice?");
     if (numAttack == "1" || numAttack == "2" || numAttack == "3") {
@@ -68,17 +68,17 @@ while (numAttack === null) {
     }
 }
 if (numAttack === 1) {
-    numDefence = 1;
+    numDefense = 1;
 } else {
-    while (numDefence === null) {
-        numDefence = prompt("1 or 2 Defence Dice?");
-        if (numDefence == "1" || numDefence == "2") {
-            numDefence = parseInt(numDefence);
+    while (numDefense === null) {
+        numDefense = prompt("1 or 2 Defense Dice?");
+        if (numDefense == "1" || numDefense == "2") {
+            numDefense = parseInt(numDefense);
         } else {
-            numDefence = null;
+            numDefense = null;
             alert("You must enter 1 or 2");
         }
     }
 }
 
-displayDice(numAttack, numDefence);
+displayDice(numAttack, numDefense);
