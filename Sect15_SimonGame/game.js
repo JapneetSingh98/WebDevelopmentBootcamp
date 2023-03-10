@@ -20,26 +20,28 @@ function nextSequence() {
 }
 
 $(".btn").click(function (event) {
-    $(event.target).addClass("pressed");
-    userPattern.push(event.target.id);
-    setTimeout(function () {
-        $(event.target).removeClass("pressed");
-    }, 150);
+    if (gameStarted) {
+        $(event.target).addClass("pressed");
+        userPattern.push(event.target.id);
+        setTimeout(function () {
+            $(event.target).removeClass("pressed");
+        }, 150);
 
-    if (    userPattern.length == gamePattern.length &&
-            userPattern[userPattern.length - 1] === gamePattern[userPattern.length - 1]) {  // won level
-        console.log("correct");
-        playAudio("sounds/" + event.target.id + ".mp3");
-        setTimeout(nextSequence, 500);
+        if (    userPattern.length == gamePattern.length &&
+                userPattern[userPattern.length - 1] === gamePattern[userPattern.length - 1]) {  // won level
+            console.log("correct");
+            playAudio("sounds/" + event.target.id + ".mp3");
+            setTimeout(nextSequence, 500);
 
-    } else if(  userPattern.length < gamePattern.length &&
-                userPattern[userPattern.length - 1] === gamePattern[userPattern.length - 1]) {
-        console.log("correct");
-        playAudio("sounds/" + event.target.id + ".mp3");
-    
-    } else {
-        console.log("incorrect");
-        gameOver();
+        } else if(  userPattern.length < gamePattern.length &&
+                    userPattern[userPattern.length - 1] === gamePattern[userPattern.length - 1]) {
+            console.log("correct");
+            playAudio("sounds/" + event.target.id + ".mp3");
+        
+        } else {
+            console.log("incorrect");
+            gameOver();
+        }
     }
 });
 
@@ -63,9 +65,7 @@ function playAudio(filePath) {
 
 
 $(document).keypress(function () {
-    console.log("hello");
     if (!gameStarted) {
-        console.log("hi");
         gameStarted = true;
         gamePattern = [];
         userPattern = [];
