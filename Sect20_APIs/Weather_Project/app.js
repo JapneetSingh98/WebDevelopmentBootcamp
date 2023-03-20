@@ -1,10 +1,11 @@
 const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
+const config = require("./config")
 
 const app = express();
 
-const apiKey = "efacd87ae38ffc91417a0f3c1a0a1a1d";
+const apiKey = config.API_KEY;
 
 app.use(bodyParser.urlencoded({extended: true}));
 
