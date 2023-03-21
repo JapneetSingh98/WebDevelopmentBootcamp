@@ -1,7 +1,7 @@
 const express = require("express");
 const https = require("https");
 const bodyParser = require("body-parser");
-const config = require("./config")
+const config = require("./config.json")
 
 const app = express();
 
@@ -23,7 +23,7 @@ app.post("/", function(req, res) {
         return new Promise((resolve, reject) => {
             
             let latLong = [null, null];
-
+            console.log(apiKey);
             const geoUrl = "https://api.openweathermap.org/geo/1.0/direct?q="+city+",&limit=5&appid="+apiKey;
             https.get(geoUrl, function(response) {
                 console.log("getLatLon Getting coordinates");
