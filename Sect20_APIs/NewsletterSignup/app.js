@@ -1,7 +1,7 @@
 //require installed node packages
 const express = require("express");
-const https = require("https");
 const mailchimp = require("@mailchimp/mailchimp_marketing")
+require('dotenv').config();
 
 //create new express app
 const app = express();
