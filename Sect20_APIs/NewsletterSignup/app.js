@@ -2,14 +2,13 @@
 const express = require("express");
 const https = require("https");
 const mailchimp = require("@mailchimp/mailchimp_marketing")
-const config = require("./config.json")
 
 //create new express app
 const app = express();
 
 mailchimp.setConfig({
-    apiKey : config.API_KEY,
-    server : config.SERVER_PREFIX
+    apiKey : process.env.API_KEY,
+    server : process.env.SERVER_PREFIX
 });
 
 //enable express to access static files in folder called "Public"
@@ -63,6 +62,6 @@ app.post("/failure", function(req, res) {
 });
 
 //use express app to listen on 3000 and log when it's working
-app.listen(process.env.PORT, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("Server is running on port 3000.")
 });
