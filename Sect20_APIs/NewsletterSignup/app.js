@@ -24,7 +24,7 @@ app.get("/", function (req, res) {
 
 //POST request
 app.post("/", function (req, res) {
-    const listId = config.AUDIENCE_ID;
+    const listId = process.env.AUDIENCE_ID;
 
     const subscribingUser = {
         firstName : req.body.fName,
