@@ -13,7 +13,7 @@ mailchimp.setConfig({
 });
 
 //enable express to access static files in folder called "Public"
-app.use(express.static("Public"));
+app.use(express.static("public"));
 
 //enable express to parse URL-encoded body i.e. info from HTML form
 app.use(express.urlencoded({ extended: true }));
@@ -34,7 +34,6 @@ app.post("/", function (req, res) {
     };
 
     async function run() {
-        console.log(listId);
         const response = await mailchimp.lists.addListMember(listId, {
             email_address : subscribingUser.email,
             status : "subscribed",
@@ -44,13 +43,26 @@ app.post("/", function (req, res) {
             }
         });
 
-        console.log("Successfully added contact as an audience member. The contact's id is ${response.id}.");
+        console.log(`Successfully added contact as an audience member. The contact's id is ${response.id}.`);
     }
 
-    run();
-})
+    function successCallBack(result) {
+        res.sendFile(__dirname + "/success.html");
+    }
+
+    function failureCallBack(error) {
+        // res.send("There was an error.")
+        res.sendFile(__dirname + "/failure.html");
+    }
+
+    run().then(successCallBack, failureCallBack);
+});
+
+app.post("/failure", function(req, res) {
+    res.redirect("/");
+});
 
 //use express app to listen on 3000 and log when it's working
-app.listen(3000, function () {
+app.listen(process.env.PORT, function () {
     console.log("Server is running on port 3000.")
 });
