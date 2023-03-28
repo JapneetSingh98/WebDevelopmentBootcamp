@@ -1,2 +1,3 @@
 Sect20_APIs/Weather_Project/config.json
 Sect20_APIs/NewsletterSignup/.env
+**/node_modules*

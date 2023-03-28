@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 app.get("/", function(req, res) {
     
     res.render("list", {
-        listTitle : date(),
+        listTitle : date.getDate(),
         newListItems : items
     });
 });
