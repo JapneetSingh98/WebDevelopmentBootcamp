@@ -18,7 +18,9 @@ function showDice(selector, max, numDice, rolls) {
     console.log(dice);
     for (let i = 0; i < max; i++) {
         if (i+1 > numDice) {
-            dice[i].style.display = "none";
+            let source = "";
+            console.log(dice[i]);
+            dice[i].src = source;
         } else {
             let source = "images/dice" + String(rolls[i]) + ".png";
             console.log(dice[i]);
